@@ -1,0 +1,23 @@
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mx_blog_prod?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: Kangda2019!
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    mode: HTML
+  jmx:
+    enabled: false
+file:
+  #文件导入路径
+  importPath: /var/import/

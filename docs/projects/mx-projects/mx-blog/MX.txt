@@ -1,0 +1,77 @@
+﻿CentOS
+==========================
+1, 文件下载；
+
+jdk-8u172-linux-x64.rpm
+apache-tomcat-8.5.34.tar.gz
+mysql57-community-release-el7-11.noarch.rpm
+
+
+
+2, 文件安装
+
+jdk：
+
+	rpm -ivh jdk-8u172-linux-x64.rpm
+
+tomcat:
+
+	tar -zxvf apache-tomcat-8.5.34.tar.gz
+
+	修改端口号；
+
+mysq:
+
+update mysql.user set authentication_string=password('Kangda2019!') where user='root';
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Kangda2019!';
+
+GRANT SELECT,UPDATE,INSERT,DELETE on *.* to 'rotto'@'%' IDENTIFIED BY 'Rotto2019!';
+
+
+阿里云服务器部署问题
+问题及反思
+
+配置文件；
+// 数据库：(思维转变) localhost 用户权限 建表失败
+// 日志：文件地址
+项目打包；// springboot
+数据库配置；// 编码 utf8 数据插入失败
+web服务器：启动和停止 tomcat 日志查看 缓存和war的解压文件是否完整，service.xml配置
+
+反思：
+本地部署和服务器部署，对比查找问题；
+错误日志输出完整；
+
+
+aliyun
+数据库：
+jdbc:mysql://39.107.65.95:3306/mx?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8
+
+
+Tomcat
+启动：sh ./apache-tomcat-8.5.34/bin/startup.sh
+停止：sh ./apache-tomcat-8.5.34/bin/shutdown.sh
+
+SSH
+
+root
+Mxxxxxxx0916
+
+MySQL
+
+配置文件：/etc/my.cnf
+启动：service mysqld start
+停止：service mysqld stop
+重启：service mysqld restart
+状态：service mysqld status
+
+打包：
+1. application.yml local->aliyun
+2. build.gradle apply plugin: 'war'
+
+org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing
+
+
+jdbc:mysql://localhost:3306/mx?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8
+jdbc:mysql://localhost:3306/mx?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8
