@@ -2,53 +2,41 @@ package com.adaiadai.juc;
 
 import java.util.concurrent.CountDownLatch;
 
+class Thread1 extends Thread {
+    private final CountDownLatch countDownLatch;
+
+    public Thread1(String name, CountDownLatch countDownLatch) {
+        super(name);
+        this.countDownLatch = countDownLatch;
+    }
+
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + " doing something");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName() + " finish");
+        // 此函数将递减锁存器的计数，如果计数到达零，则释放所有等待的线程
+        countDownLatch.countDown();
+    }
+}
+
 public class CountDownLatchDemo {
-
-    static class Driver {
-        void main() throws InterruptedException {
-            CountDownLatch startSignal = new CountDownLatch(1);
-            CountDownLatch doneSignal = new CountDownLatch(3);
-
-            for (int i = 0; i < 3; i++) {
-                new Thread(new Worker(startSignal, doneSignal)).start();
-            }
-            // don't let run yet
-            System.out.println("doSomethingElse(1)");
-            // let all threads proceed
-            startSignal.countDown();
-            System.out.println("doSomethingElse(2)");
-            // wait for all to finish
-            doneSignal.await();
+    public static void main(String[] args) {
+        CountDownLatch countDownLatch = new CountDownLatch(2);
+        Thread1 t1 = new Thread1("t1", countDownLatch);
+        Thread1 t2 = new Thread1("t2", countDownLatch);
+        t1.start();
+        t2.start();
+        System.out.println("Waiting for t1 thread and t2 thread to finish");
+        try {
+            // 此函数将会使当前线程在锁存器倒计数至零之前一直等待，除非线程被中断。
+            countDownLatch.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        System.out.println(Thread.currentThread().getName() + " continue");
     }
-
-    static class Worker implements Runnable {
-
-        private final CountDownLatch startSignal;
-        private final CountDownLatch doneSignal;
-
-        Worker(CountDownLatch startSignal, CountDownLatch doneSignal) {
-            this.startSignal = startSignal;
-            this.doneSignal = doneSignal;
-        }
-
-        public void run() {
-            try {
-                startSignal.await();
-                doWork();
-                doneSignal.countDown();
-            } catch (InterruptedException ex) {
-            }
-        }
-    }
-
-    static void doWork() {
-        System.out.println("working.");
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        CountDownLatchDemo.Driver driver = new CountDownLatchDemo.Driver();
-        driver.main();
-    }
-
 }
