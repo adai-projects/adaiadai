@@ -17,7 +17,7 @@ Java
 
 3.流按照传输的单位怎么分类？分成哪两种流,并且他们的父类叫什么？说一下常用的IO流？
 
-流按照传输单位分为 字节流和字符流 
+流按照传输单位分为字节流和字符流
 字节流的抽象基类（父类）是：java.io.InputStream、java.io.OutputStream
 字符流的抽象基类（父类）是：java.io.Reader 、 java.io.Writer
 
@@ -26,11 +26,11 @@ Java
 面向字符的操作以字符为单位对数据进行操作，在读取的时候将二进制数据转换成字符，在写的时候则是将字符转换成二进制数据，这些类都是Reader和Writer的子类（以Reader和Writer为后缀）。
 
 常用的io流
-    InputStream,OutputStream,
-        FileInputStream,FileOutputStream,
-        BufferedInputStream,BufferedOutputStream
-    Reader,Writer
-        BufferedReader,BufferedWriter
+  InputStream,OutputStream,
+    FileInputStream,FileOutputStream,
+    BufferedInputStream,BufferedOutputStream
+  Reader,Writer
+    BufferedReader,BufferedWriter
 
 IO类设计时使用了装饰者设计模式。
 
