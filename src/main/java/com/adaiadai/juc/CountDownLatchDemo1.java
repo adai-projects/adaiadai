@@ -25,13 +25,13 @@ public class CountDownLatchDemo1 {
      */
     public static void main(String[] args) {
 
-        CountDownLatchDemo1 t2 = new CountDownLatchDemo1();
+        CountDownLatchDemo1 demo = new CountDownLatchDemo1();
         Object lock = new Object();
 
         new Thread(() -> {
             synchronized (lock) {
                 System.out.println("t2 启动");
-                if (t2.size() != 5) {
+                if (demo.size() != 5) {
                     try {
                         /**会释放锁*/
                         lock.wait();
@@ -48,9 +48,9 @@ public class CountDownLatchDemo1 {
             synchronized (lock) {
                 System.out.println("t1 启动");
                 for (int i = 0; i < 9; i++) {
-                    t2.add(i);
+                    demo.add(i);
                     System.out.println("add" + i);
-                    if (t2.size() == 5) {
+                    if (demo.size() == 5) {
                         /**不会释放锁*/
                         lock.notify();
                         try {

@@ -19,12 +19,12 @@ public class CountDownLatchDemo2 {
     }
 
     public static void main(String[] args) {
-        CountDownLatchDemo2 t = new CountDownLatchDemo2();
+        CountDownLatchDemo2 demo = new CountDownLatchDemo2();
         CountDownLatch countDownLatch = new CountDownLatch(1);
 
         new Thread(() -> {
             System.out.println("t2 start");
-            if (t.size() != 5) {
+            if (demo.size() != 5) {
                 try {
                     countDownLatch.await();
                     System.out.println("t2 end");
@@ -37,9 +37,9 @@ public class CountDownLatchDemo2 {
         new Thread(() -> {
             System.out.println("t1 start");
             for (int i = 0; i < 9; i++) {
-                t.add(i);
+                demo.add(i);
                 System.out.println("add" + i);
-                if (t.size() == 5) {
+                if (demo.size() == 5) {
                     System.out.println("countdown is open");
                     countDownLatch.countDown();
                 }
