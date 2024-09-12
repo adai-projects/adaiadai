@@ -13,7 +13,7 @@
 - elasticsearch-5.5.2
 - 3台8核16GB
 - -Xms8g -Xmx8g
-- 255G+224G+278G
+- 255G+224G+278G=757G
 - shards 5-1
 
 ## Node

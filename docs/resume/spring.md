@@ -1,11 +1,5 @@
 # Spring
 
-## Spring 3.0 有什么特定啊
-- Spring 2.7 是2.x的最后一个发布版本
-- Spring 3.x 是基于 Spring framework 6.0
-- Java 的最低版本要求是 17
-- GraalVM 支持
-
 **Spring framework 6.0 特点**
 - AOT编译：Ahead-Of-Time，即预先编译，与我们熟知的Just-In-Time（JIT，即时编译）来说 AOT 带来的好处是 JVM 可以直接加载这些已经预编译成二进制码的类信息，可以直接调用，而无需再将其运行时编译成二进制码。因为 AOT 不占用运行时间，可以做一些较耗时的优化，从而显著的加快程序的启动。避免在程序运行时的编译性能消耗和内存消耗，可以在程序运行初期就达到最高性能。
 - Spring native: 在新版本中引入了Spring Native，有了Spring Native ，Spring可以不再依赖Java虚拟机，而是基于 GraalVM 将 Spring 应用程序编译成原生镜像（native image），提供了一种新的方式来部署 Spring 应用，这种部署 Spring 的方式是云原生友好的。
