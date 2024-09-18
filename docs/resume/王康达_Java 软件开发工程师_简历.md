@@ -7,9 +7,13 @@
 - 9年工作经验
 - 期望职位：Java 软件工程师（北京）
 ## 专业技能
-- 掌握 Spring Cloud/Spring Boot/Spring Data JPA/Hibernate/MyBatis/Redis/RabbitMQ/ES 等技术框架；
-- 熟悉 Linux 系统， 以及 nginx/tomcat/docker 服务部署及应用；
-- 熟悉版本火车流程、熟练使用流水线、善于编写设计、接口等技术文档；了解 DDD/RESTful 等概念。
+- 9年工作经验，有大型项目从0到1的开发、部署和维护经验，较强的业务敏感性，对技术选型、架构选型有自己的理解，较强的学习能力，热爱技术
+- 精通 Java 语言，了解 JVM 原理，锁机制、熟练使用集合、并发等框架，具备较好代码编写规范
+- 熟练使用 MySQL/Redis/ES/RabbitMQ 等数据库引擎，缓存和消息队列
+- 掌握 Spring Boot/Spring Cloud/Spring Data JPA 等 Spring 相关框架
+- 掌握常用设计模式，了解领域驱动设计（DDD）概念
+- 熟悉 Linux 系统，常用命令和 shell 脚本， 以及 nginx/tomcat/docker 服务配置及应用
+- 熟悉版本火车流程、善于编写设计、接口等技术文档
 ## 工作经历
 ### 泰康人寿保险有限责任（2020年5月~至今）
 >  北京北鑫辰科技发展有限公司（2020年5月~2021年7月）
@@ -20,7 +24,7 @@
 ## 项目经验
 ### 新版双录系统
 **项目介绍：** 对接手机端新版双录应用（APP） 、话术配置平台（WEB）。为话术模板生成、双录过程中的证件展资料展示，签字和视频文件上传等提供服务。
-**涉及技术：** Spring Cloud Alibaba\MySQL\Redis\RabbitMQ 
+**涉及技术：** Spring Cloud Alibaba\MySQL\Redis\RabbitMQ
 **工作内容：** 日常版本迭代，需求评审、设计文档编写和评审、功能开发等
 1. 首次对接保全双录，负责负责功能的需求设计、开发联调和上线发布，包括资料推送、话术配置、双录视频和签名文件上传等模块；
 2. 利用线程池+CountDownLatch+Redis 优化保单话术节点文字转音频速度；
