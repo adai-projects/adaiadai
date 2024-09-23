@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 1431. 拥有最多糖果的孩子
  */
-public class KidsWithTheGreatestNumberOfCandies {
+public class KidsWithCandies {
 
     public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         // 获取最大值
