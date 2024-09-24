@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.array;
+package com.adaiadai.data.structure.array;
 
 import java.util.concurrent.ThreadLocalRandom;
 

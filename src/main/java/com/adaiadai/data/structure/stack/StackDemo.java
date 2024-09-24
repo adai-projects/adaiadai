@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.stack;
+package com.adaiadai.data.structure.stack;
 
 import java.util.Stack;
 

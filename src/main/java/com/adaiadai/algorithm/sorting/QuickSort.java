@@ -2,6 +2,12 @@ package com.adaiadai.algorithm.sorting;
 
 import java.util.Arrays;
 
+/**
+ * <p>
+ * 快速排序（quick sort）是一种基于分治策略的排序算法，
+ * 快速排序的核心操作是“哨兵划分”，其目标是：选择数组中的某个元素作为“基准数”，将所有小于基准数的元素移到其左侧，而大于基准数的元素移到其右侧。
+ * </p>
+ */
 public class QuickSort {
 
     public static void quickSort(int[] nums, int left, int right) {

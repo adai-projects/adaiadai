@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.linkedlist;
+package com.adaiadai.data.structure.linkedlist;
 
 /* 链表节点类 */
 public class ListNode {

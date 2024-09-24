@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.tree;
+package com.adaiadai.data.structure.tree;
 
 public class BinaryTree {
 

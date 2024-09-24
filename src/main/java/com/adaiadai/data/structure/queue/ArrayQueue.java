@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.queue;
+package com.adaiadai.data.structure.queue;
 
 /* 基于环形数组实现的队列 */
 public class ArrayQueue {

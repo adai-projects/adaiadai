@@ -1,6 +1,6 @@
-package com.adaiadai.algorithm.queue;
+package com.adaiadai.data.structure.queue;
 
-import com.adaiadai.algorithm.linkedlist.ListNode;
+import com.adaiadai.data.structure.linkedlist.ListNode;
 
 /* 基于链表实现的队列 */
 public class LinkedListQueue {

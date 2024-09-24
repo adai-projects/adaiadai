@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.hashmap;
+package com.adaiadai.data.structure.hashmap;
 
 import java.util.Map;
 

@@ -2,6 +2,13 @@ package com.adaiadai.algorithm.sorting;
 
 import java.util.Arrays;
 
+/**
+ * <p>
+ * 归并排序（merge sort）是一种基于分治策略的排序算法，包含图 11-10 所示的“划分”和“合并”阶段。
+ * 划分阶段：通过递归不断地将数组从中点处分开，将长数组的排序问题转换为短数组的排序问题。
+ * 合并阶段：当子数组长度为 1 时终止划分，开始合并，持续地将左右两个较短的有序数组合并为一个较长的有序数组，直至结束。
+ * </p>
+ */
 public class MergeSort {
 
     public static void mergeSort(int[] nums, int left, int right) {

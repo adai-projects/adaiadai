@@ -2,6 +2,11 @@ package com.adaiadai.algorithm.sorting;
 
 import java.util.Arrays;
 
+/**
+ * <p>
+ *     选择排序（selection sort）的工作原理非常简单：开启一个循环，每轮从未排序区间选择最小的元素，将其放到已排序区间的末尾。
+ * </p>
+ */
 public class SelectionSort {
 
     public static void min(int[] arr) {

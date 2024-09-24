@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.tree;
+package com.adaiadai.data.structure.tree;
 
 /* 二叉搜索树 */
 public class BinarySearchTree {

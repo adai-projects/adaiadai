@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.tree;
+package com.adaiadai.data.structure.tree;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.tree;
+package com.adaiadai.data.structure.tree;
 
 /* 二叉树节点类 */
 public class TreeNode {

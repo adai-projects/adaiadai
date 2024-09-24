@@ -1,6 +1,6 @@
-package com.adaiadai.algorithm.stack;
+package com.adaiadai.data.structure.stack;
 
-import com.adaiadai.algorithm.linkedlist.ListNode;
+import com.adaiadai.data.structure.linkedlist.ListNode;
 
 /* 基于链表实现的栈 */
 public class LinkedListStack {

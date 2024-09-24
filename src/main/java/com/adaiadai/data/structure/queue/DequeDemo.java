@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.queue;
+package com.adaiadai.data.structure.queue;
 
 import java.util.Deque;
 import java.util.LinkedList;

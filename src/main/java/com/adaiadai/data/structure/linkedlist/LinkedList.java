@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.linkedlist;
+package com.adaiadai.data.structure.linkedlist;
 
 public class LinkedList {
     /* 在链表的节点 n0 之后插入节点 P */

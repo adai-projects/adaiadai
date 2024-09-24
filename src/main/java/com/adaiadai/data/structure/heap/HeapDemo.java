@@ -1,4 +1,4 @@
-package com.adaiadai.algorithm.heap;
+package com.adaiadai.data.structure.heap;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
